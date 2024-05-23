@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  schedulerNode:
+    image: daskdev/dask:latest
+    command: dask-scheduler
+    ports:
+      - "8786:8786"  #ENV PARAMS
+      - "8787:8787" #ENV PARAMS
+    networks:
+      - dask-network
+  workerNode:
+    image: daskdev/dask:latest
+    command: dask-worker schedulerNode:8786
+    networks:
+      - dask-network
+    depends_on:
+      - schedulerNode
+    deploy:
+      mode: replicated
+      replicas: 3
+
+  admarketapp:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    container_name: admarketApp 
+    networks:
+      - dask-network
+    volumes:
+      - ./data:/data
+    environment:
+      - DASK_ADDRESS=tcp://schedulerNode:8786
+      
+networks:
+  dask-network:
+    driver: bridge
