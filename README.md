@@ -6,7 +6,7 @@ This is a scalable solution to the given problem. I have used a distributed data
 The user can easily shuffle through local running as well as distributed running based on a simple make command.
 
 ## Architecture
-There is an application docker, a Dask head node docker, and a Dask worker docker, all created using a docker-compose file.
+There is an application docker, a Dask head node docker, and two Dask workers docker, all created using a docker-compose file.
 
 ## Usage
 Please note that all the data should be in the `DistributedAdrevenueTask/data` folder for ease of docker execution.
