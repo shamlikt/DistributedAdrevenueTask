@@ -20,8 +20,3 @@ identify-ai/*
 *.env
 .pytest_cache
 !dev.env
-!docs/*.json
-!docker-compose.yaml
-!parser.template.env
-!parser.template.yaml
-
