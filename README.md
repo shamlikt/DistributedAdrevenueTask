@@ -1,4 +1,4 @@
-```markdown
+
 # DistributedAdrevenueTask
 
 ![admarketplace](https://github.com/shamlikt/DistributedAdrevenueTask/assets/2134692/9c9d29cc-de5d-4167-91e0-0363ff51a915)
@@ -36,5 +36,4 @@ make run_cluster ads=ads.csv publisher=pubs.csv date=2021-06-02 output=goo.csv
 ### To shut down the cluster
 ```bash
 make cluster_down
-```
 ```
