@@ -1,4 +1,4 @@
-.PHONY: cluster_up run_cluster run_cluster_no_args cluster_down
+.PHONY: cluster_up run_cluster run_local cluster_down
 
 
 cluster_up:
