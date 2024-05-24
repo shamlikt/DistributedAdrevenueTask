@@ -2,6 +2,7 @@
 # DistributedAdrevenueTask
 
 ![admarketplace](https://github.com/shamlikt/DistributedAdrevenueTask/assets/2134692/9c9d29cc-de5d-4167-91e0-0363ff51a915)
+
 This is a scalable solution to the given problem. I have used a distributed data computing library called Dask instead of Pandas.
 The user can easily shuffle through local running as well as distributed running based on a simple make command.
 
